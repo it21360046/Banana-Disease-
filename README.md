@@ -1,5 +1,4 @@
-# Banana-Disease-
-Design and Development of Banana Disease Identification and Treatment Suggestion System
+# Design and Development of Banana Disease Identification and Treatment Suggestion System
 
 # Research Problem
 
