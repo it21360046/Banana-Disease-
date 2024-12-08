@@ -21,8 +21,8 @@ Meanwhile, the nearest agriculture officer will be notified about the detected d
 ![Architecture diagram](https://github.com/user-attachments/assets/9932d3b2-98ed-42e6-8fd6-4ffdc9f136da)
 
 # dependencies
-#pip install numpy.
-#pip install pandas.
+#pip install numpy;
+#pip install pandas;
 #pip install spacy.
 python -m spacy download en_core_web_sm
 pip install seaborn
