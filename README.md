@@ -20,23 +20,25 @@ If the system has identified a banana disease, the system will display the locat
 Meanwhile, the nearest agriculture officer will be notified about the detected disease.
 ![Architecture diagram](https://github.com/user-attachments/assets/9932d3b2-98ed-42e6-8fd6-4ffdc9f136da)
 
-# dependencies
-('pip install numpy')
-pip install pandas
-pip install spacy
-python -m spacy download en_core_web_sm
-pip install seaborn
-pip install textblob
-python -m textblob.download_corpora
-pip install nltk
-python -m nltk.downloader stopwords punkt wordnet
-pip install scikit-learn
-pip install swifter
-pip install tqdm
-pip install tensorflow
-pip install scikit-learn
-pip install tensorflow-hub
-pip install numpy matplotlib tensorflow tensorflow-hub
+
+## Dependencies
+1. `pip install numpy`
+2. `pip install pandas`
+3. `pip install spacy`
+4. `python -m spacy download en_core_web_sm`
+5. `pip install seaborn`
+6. `pip install textblob`
+7. `python -m textblob.download_corpora`
+8. `pip install nltk`
+9. `python -m nltk.downloader stopwords punkt wordnet`
+10. `pip install scikit-learn`
+11. `pip install swifter`
+12. `pip install tqdm`
+13. `pip install tensorflow`
+14. `pip install scikit-learn`
+15. `pip install tensorflow-hub`
+16. `pip install numpy matplotlib tensorflow tensorflow-hub`
+
 
 # Licenses of Libraries
 # Python
