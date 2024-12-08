@@ -40,47 +40,48 @@ Meanwhile, the nearest agriculture officer will be notified about the detected d
 16. `pip install numpy matplotlib tensorflow tensorflow-hub`
 
 
-# Licenses of Libraries
-# Python
-License: Python Software Foundation License
-Details: Open source and permissive. You can use, modify, and distribute it.
+## Licenses of Libraries
 
-# Pandas
-License: BSD 3-Clause License
-Details: Permissive license allowing redistribution and use in source and binary forms.
+1. **Python**
+   - **License**: Python Software Foundation License
+   - **Details**: Open source and permissive. You can use, modify, and distribute it.
 
-# spaCy
-License: MIT License
-Details: Open source, permissive, allowing use, modification, and redistribution.
+2. **Pandas**
+   - **License**: BSD 3-Clause License
+   - **Details**: Permissive license allowing redistribution and use in source and binary forms.
 
-# Seaborn
-License: BSD 3-Clause License
-Details: Similar to pandas, allows broad use and redistribution.
+3. **spaCy**
+   - **License**: MIT License
+   - **Details**: Open source, permissive, allowing use, modification, and redistribution.
 
-# TextBlob
-License: MIT License
-Details: Open source and permissive.
+4. **Seaborn**
+   - **License**: BSD 3-Clause License
+   - **Details**: Similar to pandas, allows broad use and redistribution.
 
-# NLTK
-License: Apache License 2.0
-Details: Open source, permissive license.
+5. **TextBlob**
+   - **License**: MIT License
+   - **Details**: Open source and permissive.
 
-# scikit-learn
-License: BSD 3-Clause License
-Details: Open source and permissive.
+6. **NLTK**
+   - **License**: Apache License 2.0
+   - **Details**: Open source, permissive license.
 
-# swifter
-License: Apache License 2.0
-Details: Open source, permissive.
+7. **scikit-learn**
+   - **License**: BSD 3-Clause License
+   - **Details**: Open source and permissive.
 
-# tqdm
-License: MIT License
-Details: Open source, permissive.
+8. **swifter**
+   - **License**: Apache License 2.0
+   - **Details**: Open source, permissive.
 
-# Matplotlib
-License: Matplotlib License (derived from the Python Software Foundation License and BSD License)
-Details: Open source and permissive.
+9. **tqdm**
+   - **License**: MIT License
+   - **Details**: Open source, permissive.
 
-# os, json, string, re (Python Standard Libraries)
-License: Python Software Foundation License
-Details: Open source and permissive.
+10. **Matplotlib**
+    - **License**: Matplotlib License (derived from the Python Software Foundation License and BSD License)
+    - **Details**: Open source and permissive.
+
+11. **os, json, string, re (Python Standard Libraries)**
+    - **License**: Python Software Foundation License
+    - **Details**: Open source and permissive.
