@@ -40,7 +40,7 @@ pip install tensorflow-hub
 pip install numpy matplotlib tensorflow tensorflow-hub
 
 # Licenses of Libraries
-#Python
+# Python
 License: Python Software Foundation License
 Details: Open source and permissive. You can use, modify, and distribute it.
 
