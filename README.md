@@ -19,3 +19,67 @@ If the system has identified a banana disease, the system will display the locat
 
 Meanwhile, the nearest agriculture officer will be notified about the detected disease.
 ![Architecture diagram](https://github.com/user-attachments/assets/9932d3b2-98ed-42e6-8fd6-4ffdc9f136da)
+
+# dependencies
+pip install numpy
+pip install matplotlib
+pip install pandas
+pip install spacy
+python -m spacy download en_core_web_sm
+pip install seaborn
+pip install textblob
+python -m textblob.download_corpora
+pip install nltk
+python -m nltk.downloader stopwords punkt wordnet
+pip install scikit-learn
+pip install swifter
+pip install tqdm
+pip install tensorflow
+pip install scikit-learn
+pip install tensorflow-hub
+pip install numpy matplotlib tensorflow tensorflow-hub
+
+# Licenses of Libraries
+#Python
+License: Python Software Foundation License
+Details: Open source and permissive. You can use, modify, and distribute it.
+
+# Pandas
+License: BSD 3-Clause License
+Details: Permissive license allowing redistribution and use in source and binary forms.
+
+# spaCy
+License: MIT License
+Details: Open source, permissive, allowing use, modification, and redistribution.
+
+# Seaborn
+License: BSD 3-Clause License
+Details: Similar to pandas, allows broad use and redistribution.
+
+# TextBlob
+License: MIT License
+Details: Open source and permissive.
+
+#NLTK
+License: Apache License 2.0
+Details: Open source, permissive license.
+
+# scikit-learn
+License: BSD 3-Clause License
+Details: Open source and permissive.
+
+# swifter
+License: Apache License 2.0
+Details: Open source, permissive.
+
+# tqdm
+License: MIT License
+Details: Open source, permissive.
+
+# Matplotlib
+License: Matplotlib License (derived from the Python Software Foundation License and BSD License)
+Details: Open source and permissive.
+
+# os, json, string, re (Python Standard Libraries)
+License: Python Software Foundation License
+Details: Open source and permissive.
