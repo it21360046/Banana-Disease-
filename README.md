@@ -1,23 +1,57 @@
 # Design and Development of Banana Disease Identification and Treatment Suggestion System
 
-# Research Problem
+## Research Problem
 
-A large portion of the cultivation is frequently harmed by Panama and Sigatoka diseases because cultivators frequently misidentify and misdiagnose them or disregard the symptoms. Not having proper knowledge or following an ineffective, inaccurate prevention methods, may increase the chances of further infestations. Hence, the relevant authorities should thoroughly share information about these diseases and effective prevention methods.
+A significant portion of banana cultivation is often damaged by Panama and Sigatoka diseases. This is due to frequent misidentification, misdiagnosis, or negligence regarding early symptoms by cultivators. Without proper knowledge or following ineffective prevention methods, the likelihood of further infestations increases. Therefore, it is crucial for relevant authorities to disseminate comprehensive information about these diseases and effective prevention strategies.
 
-In addition, approaches that exist world-wide, depends on acquiring images with higher quality which requires either a higher quality mobile phone or a camera. This can be challenging due to the limited income of farmers and limited resources farmers have.
+Currently, existing approaches depend on acquiring high-quality images, which typically require either advanced mobile phones or cameras. For farmers with limited income and resources, this is often a barrier to proper disease diagnosis.
 
-# Methodology
-The proposed system is an android mobile application that uses deep learning, computer vision, and automated machine learning to diagnose illnesses with high accuracy. First, the farmer needs to select between text or images to proceed with the diagnosis.
+---
 
-If the farmer choose images,
-Farmer has to take a picture of the infected banana leaf and uploading it to the system. The system will first verify if the provided photographs include banana leaves. After successful verification, system will proceed with the diagnosis and express result as a percentage. If the confidence level is higher, the system will recommend a treatment option for a specific leaf disease.
+## Methodology
 
-If the farmer choose text,
-Farmer can type the symptoms of the infected banana plant using either Sinhala or English language. Then the system will analyze the inserted textual symptoms and display the results and relevant controlling measures.
+The proposed solution is an **Android mobile application** that utilizes **deep learning**, **computer vision**, and **automated machine learning** to diagnose diseases with high accuracy. The system allows farmers to choose between **text-based inputs** or **image-based diagnosis** to proceed with disease identification.
 
-If the system has identified a banana disease, the system will display the location in a map. Further, the system will acquire weather data to determine the risk level and the risk area and continue to surveillance on the detected disease.
+### Image-Based Diagnosis:
+1. **Capture Image**: The farmer takes a photo of the infected banana leaf and uploads it to the system.
+2. **Image Verification**: The system checks whether the provided photo contains banana leaves.
+3. **Diagnosis**: If the image passes verification, the system proceeds with analyzing it to identify the disease and returns the results with a confidence percentage.
+4. **Treatment Recommendation**: If the diagnosis is highly confident, the system suggests a specific treatment for the identified disease.
 
-Meanwhile, the nearest agriculture officer will be notified about the detected disease.
+### Text-Based Diagnosis:
+1. **Input Symptoms**: The farmer types in the symptoms of the infected banana plant in either **Sinhala** or **English**.
+2. **Analysis**: The system analyzes the text input and displays the diagnosis along with relevant control measures to mitigate the disease.
+
+### Additional Features:
+1. **Geographical Mapping**: If a disease is detected, the system shows the location on a map.
+2. **Weather Data Integration**: The system fetches weather data to assess the **risk level** and **risk area** of the disease.
+3. **Disease Surveillance**: The system continues to monitor the detected disease's spread.
+4. **Notification to Authorities**: The nearest agriculture officer is automatically notified about the disease detection, enabling timely intervention.
+
+---
+
+## System Workflow:
+
+1. **Farmer Interaction**: Farmer chooses either image upload or text input.
+2. **Disease Identification**: The system processes the input (image/text) and identifies the disease.
+3. **Treatment Suggestion**: If disease is identified, the system recommends treatments.
+4. **Risk Assessment**: Weather and geographical data are used to evaluate the spread and risk level.
+5. **Monitoring**: Ongoing surveillance and communication with agriculture officers for control and prevention.
+
+---
+
+## Visual Example of the Workflow:
+
+- **Farmer Input** (Image or Text)
+- **Diagnosis Process**
+  - Verification (Image)
+  - Text Analysis (Text)
+- **Disease Identification**
+  - Confidence level calculation
+- **Treatment Suggestions**
+- **Risk Mapping & Weather Data**
+- **Alert System for Local Authorities**
+
 ![Architecture diagram](https://github.com/user-attachments/assets/9932d3b2-98ed-42e6-8fd6-4ffdc9f136da)
 
 
