@@ -21,10 +21,9 @@ Meanwhile, the nearest agriculture officer will be notified about the detected d
 ![Architecture diagram](https://github.com/user-attachments/assets/9932d3b2-98ed-42e6-8fd6-4ffdc9f136da)
 
 # dependencies
-pip install numpy
-pip install matplotlib
-pip install pandas
-pip install spacy
+#pip install numpy
+#pip install pandas
+#pip install spacy
 python -m spacy download en_core_web_sm
 pip install seaborn
 pip install textblob
@@ -60,7 +59,7 @@ Details: Similar to pandas, allows broad use and redistribution.
 License: MIT License
 Details: Open source and permissive.
 
-#NLTK
+# NLTK
 License: Apache License 2.0
 Details: Open source, permissive license.
 
