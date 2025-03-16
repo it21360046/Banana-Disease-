@@ -30,7 +30,7 @@ const Login = (props) => {
                 </View>
                 <View style={styles.signUpContainer}>
                     <Text style={styles.textBody}>Don't have an account?</Text>
-                    <TouchableOpacity onPress={() => props.navigation.navigate('SignUp')}>
+                    <TouchableOpacity style={styles.signUpButton} onPress={() => props.navigation.navigate('SignUp')}>
                         <Text style={styles.signUpText}> Sign Up</Text>
                     </TouchableOpacity>
                 </View>
@@ -85,10 +85,18 @@ const styles = StyleSheet.create({
     signUpContainer: {
         flexDirection: 'row',
         marginVertical: 10,
+        alignItems: 'center',
+    },
+    signUpButton: {
+        backgroundColor: '#FFD700',
+        paddingVertical: 5,
+        paddingHorizontal: 10,
+        borderRadius: 5,
+        marginLeft: 5,
     },
     signUpText: {
         fontSize: 18,
-        color: '#FFD700',
+        color: '#001f3f',
         fontWeight: 'bold',
     }
 });
