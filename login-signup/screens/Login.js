@@ -1,61 +1,96 @@
 import React from 'react';
-import {View, StyleSheet, Text, Image, ScrollView} from 'react-native';
-
+import { View, StyleSheet, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import Inputs from '../components/Inputs';
 import Submit from '../components/Submit';
 import Account from '../components/Account';
 
-const Login = props => {
+const Login = (props) => {
     return (
-        <ScrollView style={{backgroundColor: 'white'}}>
-            <View style={styles.container}>
+        <LinearGradient colors={['#0148a4', '#87CEFA']} style={styles.gradientContainer}>
+            <ScrollView contentContainerStyle={styles.scrollContainer}>
                 <Image 
                     source={require('../assets/login.png')} 
-                    resizeMode="center" 
-                    style={styles.image} />
-                <Text style={styles.textTitle}>Welcome back</Text>
-                <Text style={styles.textBody}>Log in to your existant account</Text>
-                <View style={{marginTop: 20}} />
+                    resizeMode="contain" 
+                    style={styles.image} 
+                />
+                <Text style={styles.textTitle}>Welcome Back!</Text>
+                <Text style={styles.textBody}>Log in to your existing account</Text>
+                <View style={{ marginTop: 20 }} />
                 <Inputs name="Email" icon="user" />
                 <Inputs name="Password" icon="lock" pass={true} />
-                <View style={{width: '90%'}}>
-                    <Text style={[styles.textBody], {alignSelf: 'flex-end'}}>Forgot Password?</Text>
-                </View>
+                <TouchableOpacity style={styles.forgotPassword}>
+                    <Text style={styles.forgotText}>Forgot Password?</Text>
+                </TouchableOpacity>
                 <Submit title="LOG IN" color="#0148a4" />
-                <Text style={styles.textBody}>Or connect using</Text>
-                <View style={{flexDirection: 'row'}}>
+                <Text style={styles.orText}>Or connect using</Text>
+                <View style={styles.accountContainer}>
                     <Account color="#3b5c8f" icon="facebook" title="Facebook" />
                     <Account color="#ec482f" icon="google" title="Google" />
                 </View>
-                <View style={{flexDirection: 'row', marginVertical: 5}}>
-                    <Text style={styles.textBody}>Don't Have an account</Text>
-                    <Text style={[styles.textBody, {color: 'blue'}]} onPress={() => props.navigation.navigate('SignUp')}> Sign Up</Text>
+                <View style={styles.signUpContainer}>
+                    <Text style={styles.textBody}>Don't have an account?</Text>
+                    <TouchableOpacity onPress={() => props.navigation.navigate('SignUp')}>
+                        <Text style={styles.signUpText}> Sign Up</Text>
+                    </TouchableOpacity>
                 </View>
-            </View>
-        </ScrollView>      
+            </ScrollView>
+        </LinearGradient>
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
+    gradientContainer: {
         flex: 1,
+    },
+    scrollContainer: {
         alignItems: 'center',
-        justifyContent: 'center'
+        paddingVertical: 40,
     },
     image: {
-        width: 400,
-        height: 250,
-        marginVertical: 10
+        width: 350,
+        height: 220,
+        marginVertical: 10,
     },
     textTitle: {
-        fontFamily: 'Foundation',
-        fontSize: 40,
+        fontSize: 32,
+        fontWeight: 'bold',
+        color: 'white',
         marginVertical: 10,
     },
     textBody: {
-        fontFamily: 'Foundation',
-        fontSize: 16
+        fontSize: 16,
+        color: 'white',
+    },
+    forgotPassword: {
+        width: '90%',
+        alignItems: 'flex-end',
+        marginVertical: 5,
+    },
+    forgotText: {
+        color: '#FFD700',
+        fontSize: 14,
+    },
+    orText: {
+        fontSize: 16,
+        color: 'white',
+        marginVertical: 10,
+    },
+    accountContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        width: '80%',
+        marginVertical: 10,
+    },
+    signUpContainer: {
+        flexDirection: 'row',
+        marginVertical: 10,
+    },
+    signUpText: {
+        fontSize: 16,
+        color: '#FFD700',
+        fontWeight: 'bold',
     }
 });
 
-export default Login
+export default Login;
