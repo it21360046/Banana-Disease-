@@ -19,9 +19,11 @@ const Login = (props) => {
                 <View style={{ marginTop: 20 }} />
                 <Inputs name="Email" icon="user" />
                 <Inputs name="Password" icon="lock" pass={true} />
-                <TouchableOpacity style={styles.forgotPassword}>
-                    <Text style={styles.forgotText}>Forgot Password?</Text>
-                </TouchableOpacity>
+                <View style={styles.forgotPasswordContainer}>
+                    <TouchableOpacity>
+                        <Text style={styles.forgotText}>Forgot Password?</Text>
+                    </TouchableOpacity>
+                </View>
                 <Submit title="LOG IN" color="#0074cc" />
                 <Text style={styles.orText}>Or connect using</Text>
                 <View style={styles.accountContainer}>
@@ -62,8 +64,9 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: 'white',
     },
-    forgotPassword: {
+    forgotPasswordContainer: {
         width: '90%',
+        alignSelf: 'center',
         alignItems: 'flex-end',
         marginVertical: 5,
     },
