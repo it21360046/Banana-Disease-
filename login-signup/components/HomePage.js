@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default class CropHelpScreen extends Component {
   
-  static navigationOptions = ({ navigation }) => {
+  static navigationOptions = () => {
     return {
       headerTitle: 'Home',
       headerStyle: { backgroundColor: '#2BAB32' },
@@ -35,7 +35,7 @@ export default class CropHelpScreen extends Component {
 
   renderItem = ({ item }) => (
     <TouchableOpacity style={styles.gridItem} onPress={() => this.props.navigation.navigate(item.screen)}>
-      <MaterialIcons name={item.icon} size={60} color="#2E7D32" />
+      <MaterialIcons name={item.icon} size={60} color="#1B5E20" />
       <Text style={styles.gridText}>{item.title}</Text>
     </TouchableOpacity>
   );
@@ -52,7 +52,7 @@ export default class CropHelpScreen extends Component {
           columnWrapperStyle={styles.row}
           contentContainerStyle={styles.gridContainer}
         />
-        <TouchableOpacity style={[styles.buttonContainer, styles.logoutButton]} onPress={this.logout}>
+        <TouchableOpacity style={styles.logoutButton} onPress={this.logout}>
           <Text style={styles.logoutText}>Logout</Text>
         </TouchableOpacity>
       </View>
@@ -63,19 +63,14 @@ export default class CropHelpScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#F0F0F0',
     paddingTop: 20,
     alignItems: 'center',
   },
   logo: {
-    width: 120,
-    height: 120,
+    width: 130,
+    height: 130,
     marginBottom: 20,
-  },
-  buttonContainer: {
-    width: '85%',
-    alignSelf: 'center',
-    marginTop: 20,
   },
   gridContainer: {
     alignItems: 'center',
@@ -86,31 +81,32 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   gridItem: {
-    backgroundColor: '#E8F5E9',
-    borderRadius: 15,
+    backgroundColor: '#DFF6E1',
+    borderRadius: 12,
     padding: 20,
     alignItems: 'center',
     justifyContent: 'center',
     width: '45%',
-    elevation: 5,
+    elevation: 6,
     shadowColor: '#000',
     shadowOpacity: 0.2,
-    shadowRadius: 5,
+    shadowRadius: 6,
     shadowOffset: { width: 0, height: 3 },
   },
   gridText: {
     marginTop: 10,
-    color: '#1B5E20',
-    fontSize: 16,
-    fontWeight: '600',
+    color: '#0D4D14',
+    fontSize: 17,
+    fontWeight: '700',
     textAlign: 'center',
   },
   logoutButton: {
-    backgroundColor: "#D32F2F",
-    padding: 12,
+    backgroundColor: "#C62828",
+    paddingVertical: 12,
+    paddingHorizontal: 30,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 8,
+    borderRadius: 10,
     marginBottom: 20,
   },
   logoutText: {
