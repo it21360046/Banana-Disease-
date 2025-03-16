@@ -6,7 +6,7 @@ import Submit from '../components/Submit';
 
 const SignUp = (props) => {
     return (
-        <LinearGradient colors={['#012a52', '#0487d9']} style={styles.gradientContainer}>
+        <LinearGradient colors={['#001f3f', '#0074cc']} style={styles.gradientContainer}>
             <ScrollView contentContainerStyle={styles.scrollContainer}>
                 <Image source={require('../assets/signup.png')} resizeMode="contain" style={styles.image} />
                 <Text style={styles.textTitle}>Let's Get Started</Text>
@@ -17,7 +17,7 @@ const SignUp = (props) => {
                 <Input name="Phone" icon="phone" />
                 <Input name="Password" icon="lock" pass={true} />
                 <Input name="Confirm Password" icon="lock" pass={true} />
-                <Submit color="#0487d9" title="CREATE ACCOUNT" />
+                <Submit color="#0074cc" title="CREATE ACCOUNT" />
                 <View style={styles.loginContainer}>
                     <Text style={styles.textBody}>Already have an account?</Text>
                     <TouchableOpacity onPress={() => props.navigation.navigate('Login')}>
