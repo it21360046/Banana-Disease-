@@ -1,53 +1,53 @@
-import React, {Component} from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
+import React from 'react';
+import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Input} from 'react-native-elements';
 
-class Inputs extends Component {
-    state = {isFocused: false};
-
-    onFocusChange = () => {
-        this.setState({isFocused: true})
-    }
-
-    render() {
-        return(
-            <View style={[styles.container, {borderColor: this.state.isFocused ? '#0779ef': '#eee'}]}>
-                <Input 
-                    placeholder={this.props.name}
-                    onFocus={this.onFocusChange}
-                    inputContainerStyle={styles.inputContainer}
-                    inputStyle={styles.inputText}
-                    secureTextEntry={this.props.pass}
-                    leftIcon= {
-                        <Icon 
-                            name={this.props.icon}
-                            size={22}
-                            color={this.state.isFocused ? '#0779e4' : 'grey'}
-                        />
-                    }
-                />
+const Account = ({ color, icon, title }) => {
+    return (
+        <TouchableOpacity style={[styles.container, { backgroundColor: color }]}> 
+            <View style={styles.iconContainer}>
+                <Icon name={icon} style={styles.accIcon} />
             </View>
-        );
-    };
+            <Text style={styles.textTitle}>{title}</Text>
+        </TouchableOpacity>
+    );  
 };
 
 const styles = StyleSheet.create({
     container: {
-        width: '90%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        width: 160,
         height: 50,
-        borderRadius: 100,
+        marginHorizontal: 10,
         marginVertical: 10,
-        borderWidth: 3.5
+        borderRadius: 12,
+        paddingHorizontal: 15,
+        elevation: 6,
+        shadowColor: '#000',
+        shadowOpacity: 0.3,
+        shadowRadius: 6,
+        shadowOffset: { width: 0, height: 4 },
+        justifyContent: 'center',
     },
-    inputContainer: {
-        borderBottomWidth: 0
+    iconContainer: {
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        borderRadius: 30,
+        width: 40,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 12,
     },
-    inputText: {
-        color: '#0779e4',
-        fontWeight: 'bold',
-        marginLeft: 5
+    accIcon: {
+        color: 'white',
+        fontSize: 22,
+    },
+    textTitle: {
+        color: 'white',
+        fontWeight: '600',
+        fontSize: 18,
     }
 });
 
-export default Inputs;
+export default Account;
