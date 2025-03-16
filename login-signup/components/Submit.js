@@ -1,11 +1,10 @@
 import React from 'react';
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {Button} from 'react-native-elements';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-const Submit = props => {
+const Submit = ({ title, color, onPress }) => {
     return (
-        <TouchableOpacity style={[styles.container, {backgroundColor: props.color}]}>
-            <Text style={styles.submitText}>{props.title}</Text>
+        <TouchableOpacity style={[styles.container, { backgroundColor: color }]} onPress={onPress}>
+            <Text style={styles.submitText}>{title}</Text>
         </TouchableOpacity>
     );
 };
@@ -14,17 +13,21 @@ const styles = StyleSheet.create({
     container: {
         width: '90%',
         height: 50,
-        borderColor: 'blue',
-        borderRadius: 10,
+        borderRadius: 12,
         marginVertical: 10,
-        borderWidth: 0,
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 5,
+        shadowColor: '#000',
+        shadowOpacity: 0.2,
+        shadowRadius: 5,
+        shadowOffset: { width: 0, height: 3 },
     },
     submitText: {
-        fontSize: 22,
-        fontWeight: 'bold',
+        fontSize: 20,
+        fontWeight: '600',
         color: 'white',
-        alignSelf: 'center',
-        marginVertical: 10
+        textTransform: 'uppercase',
     }
 });
 
