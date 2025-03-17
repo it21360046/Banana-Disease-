@@ -20,7 +20,7 @@ export default class Sinhala extends React.Component {
             message: '',
             showAlert: false,
             result: false,
-            title: '',
+            title: 
             loader: false,
         };
 
