@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Disease Prediction System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .result-card {
+            display: none;
+            margin-top: 20px;
+        }
+        .loading {
+            display: none;
+        }
+        .risk-high {
+            color: #dc3545;
+        }
+        .risk-medium {
+            color: #ffc107;
+        }
+        .risk-low {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0"><i class="fas fa-banana"></i> Banana Disease Prediction System</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="predictionForm">
+                            <div class="mb-3">
+                                <label for="diseaseType" class="form-label">Disease Type</label>
+                                <select class="form-select" id="diseaseType" required>
+                                    <option value="Yellow Sigatoka">Yellow Sigatoka</option>
+                                    <option value="Panama Disease">Panama Disease</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="temperature" class="form-label">Temperature (°C)</label>
+                                <input type="number" class="form-control" id="temperature" step="0.01" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="humidity" class="form-label">Humidity (%)</label>
+                                <input type="number" class="form-control" id="humidity" min="0" max="100" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="windSpeed" class="form-label">Wind Speed (km/h)</label>
+                                <input type="number" class="form-control" id="windSpeed" step="0.01" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="officerEmail" class="form-label">Officer Email</label>
+                                <input type="email" class="form-control" id="officerEmail" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-calculator"></i> Predict
+                            </button>
+                        </form>
+
+                        <!-- Loading Spinner -->
+                        <div class="loading text-center my-4">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <p class="mt-2">Analyzing data...</p>
+                        </div>
+
+                        <!-- Results Card -->
+                        <div class="result-card">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="mb-0">Prediction Results</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5>Disease Information</h5>
+                                            <p><strong>Type:</strong> <span id="resultDiseaseType"></span></p>
+                                            <p><strong>Risk Level:</strong> <span id="resultRiskLevel"></span></p>
+                                            <p><strong>Spread Area:</strong> <span id="resultSpreadArea"></span></p>
+                                            <p><strong>Spread Score:</strong> <span id="resultScore"></span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Environmental Conditions</h5>
+                                            <p><strong>Temperature:</strong> <span id="resultTemperature"></span>°C</p>
+                                            <p><strong>Humidity:</strong> <span id="resultHumidity"></span>%</p>
+                                            <p><strong>Wind Speed:</strong> <span id="resultWindSpeed"></span> km/h</p>
+                                            <p><strong>Location:</strong> <span id="resultLocation"></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+                                        <h5>Visualization</h5>
+                                        <img id="resultImage" class="img-fluid" alt="Disease Spread Analysis">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Show loading spinner
+            document.querySelector('.loading').style.display = 'block';
+            document.querySelector('.result-card').style.display = 'none';
+            
+            const data = {
+                disease_type: document.getElementById('diseaseType').value,
+                temperature: parseFloat(document.getElementById('temperature').value),
+                humidity: parseFloat(document.getElementById('humidity').value),
+                wind_speed: parseFloat(document.getElementById('windSpeed').value),
+                location: document.getElementById('location').value,
+                officer_email: document.getElementById('officerEmail').value
+            };
+            
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Update results
+                    document.getElementById('resultDiseaseType').textContent = result.disease_type;
+                    document.getElementById('resultRiskLevel').textContent = result.risk_level;
+                    document.getElementById('resultRiskLevel').className = `risk-${result.risk_level.toLowerCase()}`;
+                    document.getElementById('resultSpreadArea').textContent = result.spread_area;
+                    document.getElementById('resultScore').textContent = result.score.toFixed(2);
+                    document.getElementById('resultTemperature').textContent = result.temperature.toFixed(2);
+                    document.getElementById('resultHumidity').textContent = result.humidity.toFixed(0);
+                    document.getElementById('resultWindSpeed').textContent = result.wind_speed.toFixed(2);
+                    document.getElementById('resultLocation').textContent = data.location;
+                    document.getElementById('resultImage').src = result.image_url;
+                    
+                    // Show results
+                    document.querySelector('.result-card').style.display = 'block';
+                } else {
+                    alert('Error: ' + result.error);
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+            } finally {
+                document.querySelector('.loading').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 

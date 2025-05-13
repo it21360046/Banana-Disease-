@@ -1,0 +1,155 @@
+{
+    "authorized_officers": [
+        {
+            "name": "Dr. Kamal Perera",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Colombo"
+        },
+        {
+            "name": "Dr. Nimali Fernando",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Kandy"
+        },
+        {
+            "name": "Dr. Sunil Jayasundara",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Gampaha"
+        },
+        {
+            "name": "Dr. Nadeesha Senanayake",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Anuradhapura"
+        },
+        {
+            "name": "Dr. Roshan Perera",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Badulla"
+        },
+        {
+            "name": "Dr. Manjula Silva",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Batticaloa"
+        },
+        {
+            "name": "Dr. Udara Fernando",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Trincomalee"
+        },
+        {
+            "name": "Dr. Priyanka Mendis",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Kurunegala"
+        },
+        {
+            "name": "Dr. Ishara Abeysinghe",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Matara"
+        },
+        {
+            "name": "Dr. Ruwan Gamage",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Moneragala"
+        },
+        {
+            "name": "Dr. Janaka Perera",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Mullaitivu"
+        },
+        {
+            "name": "Dr. Chathurika Wickramasinghe",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Polonnaruwa"
+        },
+        {
+            "name": "Dr. Chamara Weerasinghe",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Puttalam"
+        },
+        {
+            "name": "Dr. Dinuka Priyashantha",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Ratnapura"
+        },
+        {
+            "name": "Dr. Lasitha Wijesinghe",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Vavuniya"
+        },
+        {
+            "name": "Dr. Dinusha Perera",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Ampara"
+        },
+        {
+            "name": "Dr. Arjuna Jayawardena",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Galle"
+        },
+        {
+            "name": "Dr. Senuri Wijeratne",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Hambantota"
+        },
+        {
+            "name": "Dr. Radhika Gunawardena",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Jaffna"
+        },
+        {
+            "name": "Dr. Prasad Kumarasinghe",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Kilinochchi"
+        },
+        {
+            "name": "Dr. Ranjith Perera",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Mannar"
+        },
+        {
+            "name": "Dr. Shashika Wijesuriya",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Moneragala"
+        },
+        {
+            "name": "Dr. Upul Jayasinghe",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Nuwara Eliya"
+        },
+        {
+            "name": "Dr. Ayesha Shah",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Polonnaruwa"
+        },
+        {
+            "name": "Dr. Lakshitha Jayarathna",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Puttalam"
+        },
+        {
+            "name": "Dr. Jagath Herath",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Ratnapura"
+        },
+        {
+            "name": "Dr. Nalin Weeraratne",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Vavuniya"
+        },
+        {
+            "name": "Dr. Shiranthi Hettiarachchi",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Kegalle"
+        },
+        {
+            "name": "Dr. Chamari Perera",
+            "email": "it21378034@my.sliit.lk",
+            "region": "Kalutara"
+        }
+    ],
+    "email_settings": {
+        "sender_email": "it21378034@my.sliit.lk",
+        "sender_password": "user@123",
+        "smtp_server": "smtp.office365.com",
+        "smtp_port": 587
+    }
+}
